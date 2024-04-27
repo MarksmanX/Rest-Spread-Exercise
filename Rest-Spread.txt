@@ -1,0 +1,38 @@
+const filterOutOdds = (...vals) => vals.filter(num => num % 2 === 0)
+
+const findMin = (...vals) => vals.reduce((min, currNum) => currNum < min ? currNum : min)
+
+const mergeObjects = (obj1, obj2) => ({...obj1, ...obj2})
+
+const doubleAndReturnArgs = (arr, ...numbers) => [...arr, ...numbers.map(v => v * 2)]
+
+SliceandDice section:
+
+const removeRandom = items => {
+    let idx = Math.floor(Math.random() * items.length);
+    return [...items.slice(0, idx), ...items.slice(idx + 1)];
+}
+
+const extend = (array1, array2) => [...array1, ...array2]
+
+const addKeyVal = (obj, key, val) => {
+    let objCopy = {...obj};
+    objCopy[key] = val;
+    return objCopy;
+}
+
+const removeKey = (obj, key) => {
+    let objCopy = {...obj};
+    delete objCopy[key];
+    return objCopy;
+}
+
+const combine = (obj1, obj2) => {
+    return {...obj1, ...obj2};
+}
+
+const update = (obj, key, val) => {
+  let newObj = { ...obj }
+  newObj[key] = val;
+  return newObj;
+}
